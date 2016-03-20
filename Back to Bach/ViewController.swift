@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     
    
     @IBAction func play(sender: UIBarButtonItem) {
-        
         if player.playing{
         player.pause()
         }else{
