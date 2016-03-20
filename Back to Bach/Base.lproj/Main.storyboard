@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="BackToBach" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TKv-uX-nnF">
+                                <rect key="frame" x="-21" y="-14" width="417" height="727"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xVI-A8-tHg">
+                                <rect key="frame" x="0.0" y="21" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Barber Shop" id="9Nl-Le-tgI"/>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nhb-wE-uA6">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="z0B-7U-brK">
+                                        <connections>
+                                            <action selector="pause:" destination="vXZ-lx-hvc" id="95w-zt-zbi"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bif-AJ-wzS"/>
+                                    <barButtonItem systemItem="play" id="8y7-ZL-mH2">
+                                        <connections>
+                                            <action selector="play:" destination="vXZ-lx-hvc" id="Qsq-mq-DHG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gkW-XP-G6W"/>
+                                    <barButtonItem systemItem="stop" id="9fl-q8-1Db">
+                                        <connections>
+                                            <action selector="stop:" destination="vXZ-lx-hvc" id="Bgz-r2-8D6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="sZo-Ww-uZ5">
+                                <rect key="frame" x="70" y="580" width="234" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="vXZ-lx-hvc" eventType="valueChanged" id="4EO-ec-SMc"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sZo-Ww-uZ5" firstAttribute="centerX" secondItem="TKv-uX-nnF" secondAttribute="centerX" id="8I6-iF-lxt"/>
+                            <constraint firstItem="nhb-wE-uA6" firstAttribute="leading" secondItem="xVI-A8-tHg" secondAttribute="leading" id="AJi-o0-cE0"/>
+                            <constraint firstItem="TKv-uX-nnF" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-37" id="Ccd-uj-g6D"/>
+                            <constraint firstItem="xVI-A8-tHg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="E09-8A-mMu"/>
+                            <constraint firstItem="nhb-wE-uA6" firstAttribute="centerX" secondItem="sZo-Ww-uZ5" secondAttribute="centerX" id="EAG-rU-gna"/>
+                            <constraint firstItem="xVI-A8-tHg" firstAttribute="trailing" secondItem="nhb-wE-uA6" secondAttribute="trailing" id="H0m-kn-9AY"/>
+                            <constraint firstAttribute="trailing" secondItem="nhb-wE-uA6" secondAttribute="trailing" id="RMJ-Fe-Ezl"/>
+                            <constraint firstItem="nhb-wE-uA6" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="dIy-Yz-7BI"/>
+                            <constraint firstItem="sZo-Ww-uZ5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="56" id="ecw-db-Xo7"/>
+                            <constraint firstItem="TKv-uX-nnF" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="-14" id="hBx-zj-Qfi"/>
+                            <constraint firstItem="xVI-A8-tHg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="1" id="mG7-fT-Olu"/>
+                            <constraint firstItem="nhb-wE-uA6" firstAttribute="top" secondItem="sZo-Ww-uZ5" secondAttribute="bottom" constant="13" id="nD0-5j-3Xg"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="TKv-uX-nnF" secondAttribute="bottom" constant="-46" id="rfg-hR-tYD"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="playButton" destination="8y7-ZL-mH2" id="bRh-X8-ZUq"/>
+                        <outlet property="slider" destination="sZo-Ww-uZ5" id="1UZ-sL-7Is"/>
+                        <outlet property="toolbarControl" destination="nhb-wE-uA6" id="Xip-1s-I5Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454.5" y="372.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="640" height="920"/>
+    </resources>
+</document>
